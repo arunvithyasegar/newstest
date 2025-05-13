@@ -121,8 +121,11 @@ def main():
         ["Dashboard", "News Analysis", "About"]
     )
     
-    # API Key input
-    api_key = st.sidebar.text_input("Enter NewsAPI Key", type="password")
+    # Set a default API key
+    DEFAULT_API_KEY = "8357a2cfb61d426abe449df18e7d86e1"
+
+    # Modify the API Key input to use the default key if no input is provided
+    api_key = st.sidebar.text_input("Enter NewsAPI Key", type="password", value=DEFAULT_API_KEY)
     
     # Search parameters
     if page == "News Analysis":
